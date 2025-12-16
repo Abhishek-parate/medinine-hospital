@@ -57,45 +57,8 @@
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <div class="flex items-center space-x-3">
-                    <i class="fas fa-hospital text-medical text-3xl"></i>
-                    <h1 class="text-2xl font-bold text-medical">Medinine Hospital</h1>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-medical transition duration-300 flex items-center space-x-1">
-                        <i class="fas fa-home"></i>
-                        <span>Home</span>
-                    </a>
-                    <a href="about.html" class="text-gray-700 hover:text-medical transition duration-300 flex items-center space-x-1">
-                        <i class="fas fa-info-circle"></i>
-                        <span>About</span>
-                    </a>
-                    <a href="services.html" class="text-gray-700 hover:text-medical transition duration-300 flex items-center space-x-1">
-                        <i class="fas fa-stethoscope"></i>
-                        <span>Services</span>
-                    </a>
-                    <a href="doctors.html" class="text-medical font-semibold flex items-center space-x-1">
-                        <i class="fas fa-user-md"></i>
-                        <span>Doctors</span>
-                    </a>
-                    <a href="contact.html" class="text-gray-700 hover:text-medical transition duration-300 flex items-center space-x-1">
-                        <i class="fas fa-phone"></i>
-                        <span>Contact</span>
-                    </a>
-                </nav>
-                <div class="flex items-center space-x-4">
-                    <a href="tel:8668289254" class="bg-red-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-red-700 transition duration-300 flex items-center space-x-2">
-                        <i class="fas fa-ambulance"></i>
-                        <span class="hidden sm:inline">Emergency:</span>
-                        <span>8668289254</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+<?php include 'includes/header.php'; ?>
+
 
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-r from-medical via-medicalLight to-medicalDark text-white py-20 overflow-hidden">
@@ -107,211 +70,143 @@
         </div>
     </section>
 
-    <!-- Department Wise Doctors -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h3 class="text-4xl font-bold text-gray-800 mb-4">Meet Our Medical Team</h3>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our hospital is staffed with experienced doctors and specialists across various medical disciplines, ensuring comprehensive healthcare for all your medical needs.</p>
-            </div>
-
-            <!-- Emergency Medicine Department -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h4 class="text-3xl font-bold text-medical mb-4 flex items-center justify-center">
-                        <i class="fas fa-ambulance mr-4"></i>
-                        Emergency Medicine Department
-                    </h4>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Our emergency medicine specialists are available 24/7 to provide immediate care for trauma, critical conditions, and medical emergencies.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-red-500">
-                        <div class="text-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Emergency Medicine Specialist" class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg mb-4">
-                            <h5 class="text-xl font-bold text-gray-800">Dr. Rajesh Sharma</h5>
-                            <p class="text-red-600 font-semibold">Emergency Medicine Specialist</p>
-                            <p class="text-gray-600 text-sm">MBBS, MD Emergency Medicine</p>
-                        </div>
-                        <div class="space-y-2 text-sm text-gray-600 mb-4">
-                            <p><i class="fas fa-graduation-cap text-red-500 mr-2"></i>15+ years experience</p>
-                            <p><i class="fas fa-clock text-red-500 mr-2"></i>Available 24/7</p>
-                            <p><i class="fas fa-award text-red-500 mr-2"></i>Trauma Care Expert</p>
-                        </div>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">Specializes in emergency trauma care, critical patient management, and life-saving procedures. Expert in handling cardiac emergencies and multiple trauma cases.</p>
-                        <a href="tel:8668289254" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition duration-300 w-full block text-center">
-                            <i class="fas fa-phone mr-2"></i>Book Consultation
-                        </a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-red-500">
-                        <div class="text-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Trauma Surgeon" class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg mb-4">
-                            <h5 class="text-xl font-bold text-gray-800">Dr. Priya Patel</h5>
-                            <p class="text-red-600 font-semibold">Trauma Surgeon</p>
-                            <p class="text-gray-600 text-sm">MBBS, MS Orthopedics</p>
-                        </div>
-                        <div class="space-y-2 text-sm text-gray-600 mb-4">
-                            <p><i class="fas fa-graduation-cap text-red-500 mr-2"></i>12+ years experience</p>
-                            <p><i class="fas fa-clock text-red-500 mr-2"></i>Emergency Surgery</p>
-                            <p><i class="fas fa-award text-red-500 mr-2"></i>Fracture Specialist</p>
-                        </div>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">Expert in trauma surgery, fracture management, and spine injuries. Specialized in emergency orthopedic procedures and complex bone surgeries.</p>
-                        <a href="tel:8668289254" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition duration-300 w-full block text-center">
-                            <i class="fas fa-phone mr-2"></i>Book Consultation
-                        </a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-red-500">
-                        <div class="text-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Critical Care Specialist" class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg mb-4">
-                            <h5 class="text-xl font-bold text-gray-800">Dr. Anil Kumar</h5>
-                            <p class="text-red-600 font-semibold">Critical Care Specialist</p>
-                            <p class="text-gray-600 text-sm">MBBS, MD Critical Care</p>
-                        </div>
-                        <div class="space-y-2 text-sm text-gray-600 mb-4">
-                            <p><i class="fas fa-graduation-cap text-red-500 mr-2"></i>18+ years experience</p>
-                            <p><i class="fas fa-clock text-red-500 mr-2"></i>ICU Management</p>
-                            <p><i class="fas fa-award text-red-500 mr-2"></i>Ventilator Expert</p>
-                        </div>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">Specializes in intensive care management, ventilator support, and critical patient monitoring. Expert in managing complex medical conditions.</p>
-                        <a href="tel:8668289254" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-red-700 transition duration-300 w-full block text-center">
-                            <i class="fas fa-phone mr-2"></i>Book Consultation
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Surgery Department -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h4 class="text-3xl font-bold text-medical mb-4 flex items-center justify-center">
-                        <i class="fas fa-cut mr-4"></i>
-                        Surgery Department
-                    </h4>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Our experienced surgeons perform both general and laparoscopic procedures with advanced surgical techniques and patient safety protocols.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-blue-500">
-                        <div class="text-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="General Surgeon" class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg mb-4">
-                            <h5 class="text-xl font-bold text-gray-800">Dr. Suresh Gupta</h5>
-                            <p class="text-blue-600 font-semibold">General Surgeon</p>
-                            <p class="text-gray-600 text-sm">MBBS, MS General Surgery</p>
-                        </div>
-                        <div class="space-y-2 text-sm text-gray-600 mb-4">
-                            <p><i class="fas fa-graduation-cap text-blue-500 mr-2"></i>20+ years experience</p>
-                            <p><i class="fas fa-cut text-blue-500 mr-2"></i>Expert Surgeon</p>
-                            <p><i class="fas fa-award text-blue-500 mr-2"></i>Minimal Invasive Surgery</p>
-                        </div>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">Specializes in general surgery, abdominal procedures, and emergency surgical interventions. Expert in both traditional and modern surgical techniques.</p>
-                        <a href="tel:8668289254" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition duration-300 w-full block text-center">
-                            <i class="fas fa-phone mr-2"></i>Book Consultation
-                        </a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-blue-500">
-                        <div class="text-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Laparoscopic Surgeon" class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg mb-4">
-                            <h5 class="text-xl font-bold text-gray-800">Dr. Amit Joshi</h5>
-                            <p class="text-blue-600 font-semibold">Laparoscopic Surgeon</p>
-                            <p class="text-gray-600 text-sm">MBBS, MS, MCh Laparoscopy</p>
-                        </div>
-                        <div class="space-y-2 text-sm text-gray-600 mb-4">
-                            <p><i class="fas fa-graduation-cap text-blue-500 mr-2"></i>14+ years experience</p>
-                            <p><i class="fas fa-cut text-blue-500 mr-2"></i>Minimally Invasive</p>
-                            <p><i class="fas fa-award text-blue-500 mr-2"></i>Advanced Laparoscopy</p>
-                        </div>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">Expert in minimally invasive laparoscopic procedures, gallbladder surgery, hernia repair, and advanced endoscopic techniques for faster recovery.</p>
-                        <a href="tel:8668289254" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition duration-300 w-full block text-center">
-                            <i class="fas fa-phone mr-2"></i>Book Consultation
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Maternity & Gynecology Department -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h4 class="text-3xl font-bold text-medical mb-4 flex items-center justify-center">
-                        <i class="fas fa-baby mr-4"></i>
-                        Maternity & Gynecology Department
-                    </h4>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Our gynecologists provide comprehensive women's healthcare including maternity services, fertility treatments, and gynecological procedures.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-pink-500">
-                        <div class="text-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Gynecologist" class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg mb-4">
-                            <h5 class="text-xl font-bold text-gray-800">Dr. Kavita Singh</h5>
-                            <p class="text-pink-600 font-semibold">Gynecologist & Obstetrician</p>
-                            <p class="text-gray-600 text-sm">MBBS, MD Gynecology</p>
-                        </div>
-                        <div class="space-y-2 text-sm text-gray-600 mb-4">
-                            <p><i class="fas fa-graduation-cap text-pink-500 mr-2"></i>16+ years experience</p>
-                            <p><i class="fas fa-baby text-pink-500 mr-2"></i>Maternity Expert</p>
-                            <p><i class="fas fa-award text-pink-500 mr-2"></i>High-Risk Pregnancy</p>
-                        </div>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">Specializes in normal and high-risk pregnancies, delivery services, gynecological surgeries, and women's reproductive health care.</p>
-                        <a href="tel:8668289254" class="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700 transition duration-300 w-full block text-center">
-                            <i class="fas fa-phone mr-2"></i>Book Consultation
-                        </a>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-pink-500">
-                        <div class="text-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Fertility Specialist" class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg mb-4">
-                            <h5 class="text-xl font-bold text-gray-800">Dr. Meera Jain</h5>
-                            <p class="text-pink-600 font-semibold">Fertility Specialist</p>
-                            <p class="text-gray-600 text-sm">MBBS, MD, Fellowship in IVF</p>
-                        </div>
-                        <div class="space-y-2 text-sm text-gray-600 mb-4">
-                            <p><i class="fas fa-graduation-cap text-pink-500 mr-2"></i>12+ years experience</p>
-                            <p><i class="fas fa-heart text-pink-500 mr-2"></i>Infertility Treatment</p>
-                            <p><i class="fas fa-award text-pink-500 mr-2"></i>IVF Expert</p>
-                        </div>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">Expert in infertility treatment, IVF procedures, fertility counseling, and advanced reproductive technologies for couples.</p>
-                        <a href="tel:8668289254" class="bg-pink-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-pink-700 transition duration-300 w-full block text-center">
-                            <i class="fas fa-phone mr-2"></i>Book Consultation
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nephrology Department -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h4 class="text-3xl font-bold text-medical mb-4 flex items-center justify-center">
-                        <i class="fas fa-kidneys mr-4"></i>
-                        Nephrology Department
-                    </h4>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Our nephrologists specialize in kidney diseases, dialysis services, and comprehensive renal care for patients with kidney conditions.</p>
-                </div>
-                
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-green-500">
-                        <div class="text-center mb-6">
-                            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Nephrologist" class="w-32 h-32 rounded-full mx-auto object-cover shadow-lg mb-4">
-                            <h5 class="text-xl font-bold text-gray-800">Dr. Ravi Mehta</h5>
-                            <p class="text-green-600 font-semibold">Nephrologist</p>
-                            <p class="text-gray-600 text-sm">MBBS, MD Nephrology</p>
-                        </div>
-                        <div class="space-y-2 text-sm text-gray-600 mb-4">
-                            <p><i class="fas fa-graduation-cap text-green-500 mr-2"></i>18+ years experience</p>
-                            <p><i class="fas fa-kidneys text-green-500 mr-2"></i>Kidney Specialist</p>
-                            <p><i class="fas fa-award text-green-500 mr-2"></i>Dialysis Expert</p>
-                        </div>
-                        <p class="text-gray-700 text-sm leading-relaxed mb-4">Specializes in kidney disease diagnosis, dialysis management, hypertension treatment, and chronic kidney disease care.</p>
-                        <a href="tel:8668289254" class="bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-700 transition duration-300 w-full block text-center">
-                            <i class="fas fa-phone mr-2"></i>Book Consultation
-                        </a>
-                    </div>
-                </div>
-            </div>
+<!-- Department Wise Doctors -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">Meet Our Medical Team</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Our hospital is staffed with experienced doctors and specialists across various medical disciplines.</p>
         </div>
-    </section>
+
+        <!-- 2 Cards Per Row Layout -->
+        <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            
+            <!-- Doctor 1: Dr. Rajashree P. Kapkar -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-teal-500 flex flex-col">
+                <div class="flex items-start gap-6 mb-6">
+                    <img src="assets/drrajashree.jpg" alt="Dr. Rajashree P. Kapkar" class="w-40 h-40 rounded-xl object-cover shadow-md flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Dr. Rajashree P. Kapkar</h3>
+                        <p class="text-teal-600 font-semibold text-lg mb-1">Consultant Physician Intensivist</p>
+                        <p class="text-gray-600 text-sm mb-3">M.B.B.S, M.D (Medicine)</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-graduation-cap mr-1"></i>M.D (Medicine)
+                            </span>
+                            <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-stethoscope mr-1"></i>Internal Medicine
+                            </span>
+                            <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-award mr-1"></i>Critical Care
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 leading-relaxed mb-6 flex-grow">Specializes in internal medicine, critical care management, and intensive patient care with expertise in acute and chronic disease treatment.</p>
+                
+                <a href="tel:07122990682" class="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition duration-300 w-full block text-center shadow-md mt-auto">
+                    <i class="fas fa-phone mr-2"></i>Book Consultation
+                </a>
+            </div>
+
+            <!-- Doctor 2: Dr. Rajesh Dwivedi -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-teal-500 flex flex-col">
+                <div class="flex items-start gap-6 mb-6">
+                    <img src="assets/drrajesh.jpg" alt="Dr. Rajesh Dwivedi" class="w-40 h-40 rounded-xl object-cover shadow-md flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Dr. Rajesh Dwivedi</h3>
+                        <p class="text-teal-600 font-semibold text-lg mb-1">Consultant Anaesthesiologist</p>
+                        <p class="text-gray-600 text-sm mb-3">M.B.B.S, M.D, Anesthesiologist</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-graduation-cap mr-1"></i>M.D Anesthesiology
+                            </span>
+                            <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-syringe mr-1"></i>Anesthesia
+                            </span>
+                            <span class="bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-award mr-1"></i>Intensivist
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 leading-relaxed mb-6 flex-grow">Expert in anesthesia administration, pain management, and critical care. Specializes in perioperative care and intensive patient monitoring.</p>
+                
+                <a href="tel:07122990682" class="bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-teal-700 transition duration-300 w-full block text-center shadow-md mt-auto">
+                    <i class="fas fa-phone mr-2"></i>Book Consultation
+                </a>
+            </div>
+
+            <!-- Doctor 3: Dr. Shreya Pothare -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-blue-500 flex flex-col">
+                <div class="flex items-start gap-6 mb-6">
+                    <img src="assets/drshreya.jpg" alt="Dr. Shreya Pothare" class="w-40 h-40 rounded-xl object-cover shadow-md flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Dr. Shreya Pothare</h3>
+                        <p class="text-blue-600 font-semibold text-lg mb-1">Consultant Obstetrician Gynaecologist</p>
+                        <p class="text-gray-600 text-sm mb-1">MBBS, MS Obstetrics (KEM,Mumbai)</p>
+                        <p class="text-gray-600 text-sm mb-3">DNB OBGY, MNAMS, MRCOGI</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-graduation-cap mr-1"></i>MS, DNB OBGY
+                            </span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-baby mr-1"></i>Gynecology
+                            </span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-award mr-1"></i>MRCOGI
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 leading-relaxed mb-6 flex-grow">Expert in obstetrics, gynecology, high-risk pregnancies, and women's reproductive health. Specialized in advanced gynecological procedures.</p>
+                
+                <a href="tel:8668289254" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full block text-center shadow-md mt-auto">
+                    <i class="fas fa-phone mr-2"></i>Book Consultation
+                </a>
+            </div>
+
+            <!-- Doctor 4: Dr. Nitin R. Pothare -->
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 border-t-4 border-blue-500 flex flex-col">
+                <div class="flex items-start gap-6 mb-6">
+                    <img src="assets/drnitin.jpg" alt="Dr. Nitin R. Pothare" class="w-40 h-40 rounded-xl object-cover shadow-md flex-shrink-0">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2">Dr. Nitin .R. Pothare</h3>
+                        <p class="text-blue-600 font-semibold text-lg mb-1">Orthopedics & Spine Surgeon</p>
+                        <p class="text-gray-600 text-sm mb-1">M.B.B.S, M.S Orthopedics</p>
+                        <p class="text-gray-600 text-sm mb-3">D.N.B, FISS, FMISS</p>
+                        
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-graduation-cap mr-1"></i>MS Orthopedics
+                            </span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-bone mr-1"></i>Spine Surgery
+                            </span>
+                            <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold">
+                                <i class="fas fa-award mr-1"></i>Minimally Invasive
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="text-gray-700 leading-relaxed mb-6 flex-grow">Specialist in orthopedic surgery, minimally invasive spine procedures, joint replacement, and trauma care with advanced surgical techniques.</p>
+                
+                <a href="tel:8668289254" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300 w-full block text-center shadow-md mt-auto">
+                    <i class="fas fa-phone mr-2"></i>Book Consultation
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
 
     <!-- Doctor Qualifications & Achievements -->
     <section class="py-16 bg-gray-50">
@@ -407,64 +302,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <i class="fas fa-hospital text-medical text-2xl"></i>
-                        <h4 class="text-2xl font-bold">Medinine Hospital</h4>
-                    </div>
-                    <p class="text-gray-300 mb-4 leading-relaxed">Leading healthcare provider in Nagpur with expert doctors across all medical specialties providing compassionate and comprehensive patient care.</p>
-                    <p class="text-gray-300">Emergency: <a href="tel:8668289254" class="text-red-400 font-semibold hover:text-red-300">8668289254</a></p>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Our Specialties</h4>
-                    <ul class="space-y-3">
-                        <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
-                            <i class="fas fa-chevron-right text-medical"></i>
-                            <span>Emergency Medicine</span>
-                        </a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
-                            <i class="fas fa-chevron-right text-medical"></i>
-                            <span>General Surgery</span>
-                        </a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
-                            <i class="fas fa-chevron-right text-medical"></i>
-                            <span>Maternity Care</span>
-                        </a></li>
-                        <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300 flex items-center space-x-2">
-                            <i class="fas fa-chevron-right text-medical"></i>
-                            <span>Nephrology</span>
-                        </a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-xl font-bold mb-6">Contact Info</h4>
-                    <div class="space-y-3 text-gray-300">
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-map-marker-alt text-medical"></i>
-                            <div>
-                                <p>1A/1, Parivartan Square</p>
-                                <p>Besa Road, Manewada, Nagpur</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-phone text-medical"></i>
-                            <p>Phone: <a href="tel:8668289254" class="text-red-400 hover:text-red-300">8668289254</a></p>
-                        </div>
-                        <div class="flex items-center space-x-3">
-                            <i class="fas fa-clock text-medical"></i>
-                            <p>24/7 Emergency Services</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2025 Medinine Hospital. All rights reserved. | Expert Doctors in Nagpur</p>
-            </div>
-        </div>
-    </footer>
+ <?php include 'includes/footer.php'; ?>
 
     <script>
         // Interactive elements
