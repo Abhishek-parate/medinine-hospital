@@ -1,0 +1,161 @@
+# .htaccess for Medinine Hospital Website
+RewriteEngine On
+
+# Security Headers
+Header always set X-Content-Type-Options nosniff
+Header always set X-Frame-Options DENY
+Header always set X-XSS-Protection "1; mode=block"
+
+# Force HTTPS (uncomment when SSL is ready)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove www (choose one option)
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# SEO-Friendly URL Redirects - Old URLs to New URLs
+# Main Pages
+RewriteRule ^about/?$ /about-best-hospital-nagpur [R=301,L]
+RewriteRule ^services/?$ /healthcare-services-nagpur [R=301,L]
+RewriteRule ^doctors/?$ /expert-doctors-nagpur [R=301,L]
+RewriteRule ^contact/?$ /contact-medinine-hospital [R=301,L]
+
+# Service Pages
+RewriteRule ^trauma-care/?$ /24-7-trauma-care-nagpur [R=301,L]
+RewriteRule ^emergency/?$ /24-7-trauma-care-nagpur [R=301,L]
+RewriteRule ^surgery/?$ /laparoscopic-surgery-nagpur [R=301,L]
+RewriteRule ^maternity/?$ /pregnancy-care-delivery-nagpur [R=301,L]
+RewriteRule ^dialysis/?$ /hemodialysis-center-nagpur [R=301,L]
+RewriteRule ^icu/?$ /intensive-care-unit-nagpur [R=301,L]
+RewriteRule ^diagnostics/?$ /xray-ultrasound-tests-nagpur [R=301,L]
+
+# SEO-Friendly URL to File Mapping
+# Main Pages
+RewriteRule ^about-best-hospital-nagpur/?$ /about-medinine-hospital-nagpur.php [L]
+RewriteRule ^healthcare-services-nagpur/?$ /medical-services-nagpur.php [L]
+RewriteRule ^expert-doctors-nagpur/?$ /doctors-specialists-nagpur.php [L]
+RewriteRule ^contact-medinine-hospital/?$ /contact-hospital-nagpur.php [L]
+
+# Emergency Services
+RewriteRule ^24-7-trauma-care-nagpur/?$ /emergency-trauma-care-nagpur.php [L]
+RewriteRule ^intensive-care-unit-nagpur/?$ /icu-critical-care-nagpur.php [L]
+RewriteRule ^emergency-helpline-8668289254/?$ /emergency-contact-nagpur.php [L]
+
+# Medical Services
+RewriteRule ^laparoscopic-surgery-nagpur/?$ /surgery-services-nagpur.php [L]
+RewriteRule ^pregnancy-care-delivery-nagpur/?$ /maternity-gynecology-nagpur.php [L]
+RewriteRule ^hemodialysis-center-nagpur/?$ /kidney-dialysis-treatment-nagpur.php [L]
+RewriteRule ^xray-ultrasound-tests-nagpur/?$ /diagnostic-imaging-services-nagpur.php [L]
+
+# Additional Services
+RewriteRule ^blood-tests-lab-nagpur/?$ /pathology-lab-nagpur.php [L]
+RewriteRule ^24-7-ambulance-nagpur/?$ /ambulance-services-nagpur.php [L]
+RewriteRule ^hospital-pharmacy-nagpur/?$ /pharmacy-services-nagpur.php [L]
+RewriteRule ^preventive-health-screening-nagpur/?$ /health-checkup-packages-nagpur.php [L]
+
+# Department Pages
+RewriteRule ^heart-specialist-nagpur/?$ /cardiology-heart-care-nagpur.php [L]
+RewriteRule ^fracture-treatment-nagpur/?$ /orthopedic-bone-care-nagpur.php [L]
+RewriteRule ^family-doctor-nagpur/?$ /general-medicine-nagpur.php [L]
+RewriteRule ^children-specialist-nagpur/?$ /pediatric-child-care-nagpur.php [L]
+RewriteRule ^diabetes-treatment-nagpur/?$ /diabetes-care-clinic-nagpur.php [L]
+
+# Information Pages
+RewriteRule ^directions-medinine-hospital/?$ /hospital-location-besa-road.php [L]
+RewriteRule ^ac-rooms-parking-facilities/?$ /patient-facilities-amenities.php [L]
+RewriteRule ^book-doctor-appointment-nagpur/?$ /appointment-booking-online.php [L]
+RewriteRule ^medical-advice-health-tips/?$ /health-tips-blog-nagpur.php [L]
+
+# Sitemap
+RewriteRule ^sitemap/?$ /sitemap.php [L]
+
+# Generic PHP extension removal (for any remaining files)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Redirect .php extension to clean URLs
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1? [NC,L,R=301]
+
+# Remove trailing slash
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# Security Settings
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files *.ini>
+    Order allow,deny
+    Deny from all
+</Files>
+
+<Files *.log>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Prevent access to backup files
+<FilesMatch "\.(bak|backup|old|tmp)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Custom Error Pages
+ErrorDocument 404 /404.php
+ErrorDocument 500 /500.php
+
+# Compression for better performance
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE application/xhtml+xml
+    AddOutputFilterByType DEFLATE application/rss+xml
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Browser Caching
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/ico "access plus 1 year"
+    ExpiresByType image/icon "access plus 1 year"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# Cache Control Headers
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js|png|jpg|jpeg|gif|webp|ico|svg)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    <FilesMatch "\.(html|htm|php)$">
+        Header set Cache-Control "max-age=3600, public"
+    </FilesMatch>
+</IfModule>
+
+# Prevent hotlinking
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?medininehospital\.com [NC]
+RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|webp)$ [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp)$ - [F]
+
+# Block bad bots
+RewriteCond %{HTTP_USER_AGENT} (bot|crawler|spider) [NC]
+RewriteCond %{HTTP_USER_AGENT} !(googlebot|bingbot|slurp|facebookexternalhit) [NC]
+RewriteRule .* - [F,L]
