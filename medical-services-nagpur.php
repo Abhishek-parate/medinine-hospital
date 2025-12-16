@@ -132,7 +132,7 @@ include 'includes/header.php';
                     </div>
                 </div>
                 <div class="flex items-center justify-between">
-                    <a href="/emergency-trauma-care-nagpur.php" class="text-accent font-semibold hover:text-red-700 transition duration-300 flex items-center">
+                    <a href="emergency-trauma-care-nagpur" class="text-accent font-semibold hover:text-red-700 transition duration-300 flex items-center">
                         <span>Learn More</span>
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
