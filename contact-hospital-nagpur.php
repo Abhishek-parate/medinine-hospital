@@ -373,19 +373,20 @@ include 'includes/header.php';
                 </div>
             </div>
             
-            <div class="bg-gray-50 p-6 rounded-xl card">
-                <div class="flex items-center mb-4">
-                    <div class="bg-green-500 text-white p-3 rounded-full mr-4">
-                        <i class="fas fa-kidneys text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-secondary">Dialysis Center</h3>
-                </div>
-                <div class="space-y-2 text-sm">
-                    <p><strong>Phone:</strong> <a href="tel:8668289254" class="text-green-500 font-semibold">8668289254</a></p>
-                    <p><strong>Availability:</strong> Mon-Sat, 6:00 AM - 8:00 PM</p>
-                    <p><strong>Services:</strong> Hemodialysis, Kidney care</p>
-                </div>
-            </div>
+           <div class="bg-gray-50 p-6 rounded-xl card">
+    <div class="flex items-center mb-4">
+        <div class="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-procedures text-xl"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-secondary">Dialysis Center</h3>
+    </div>
+    <div class="space-y-2 text-sm">
+        <p><strong>Phone:</strong> <a href="tel:8668289254" class="text-green-500 font-semibold">8668289254</a></p>
+        <p><strong>Availability:</strong> Mon-Sat, 6:00 AM - 8:00 PM</p>
+        <p><strong>Services:</strong> Hemodialysis, Kidney care</p>
+    </div>
+</div>
+
             
             <div class="bg-gray-50 p-6 rounded-xl card">
                 <div class="flex items-center mb-4">
